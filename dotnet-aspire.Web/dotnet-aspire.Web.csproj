@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Aspire.RabbitMQ.Client" Version="9.4.0" />
     <PackageReference Include="Aspire.StackExchange.Redis.OutputCaching" Version="8.0.0-preview.2.23619.3" />
   </ItemGroup>
 
