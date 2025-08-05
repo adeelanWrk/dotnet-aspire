@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add service defaults & Aspire components.
 builder.AddServiceDefaults();
 builder.AddRedisOutputCache("cache");
-builder.AddRabbitMQClient("messaging");
+builder.AddRabbitMQClient("rabbit");
 
 
 // Add services to the container.

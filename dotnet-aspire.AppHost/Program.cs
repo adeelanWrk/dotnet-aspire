@@ -1,7 +1,9 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
 var cache = builder.AddRedisContainer("cache");
-var rabbit = builder.AddRabbitMQContainer("rabbit");
+var rabbit = builder.AddRabbitMQContainer("rabbit")
+    .WithEnvironment("RABBITMQ_DEFAULT_USER", "myuser")
+    .WithEnvironment("RABBITMQ_DEFAULT_PASS", "mypassword");
 
 
 var apiService = builder.AddProject<Projects.dotnet_aspire_ApiService>("apiservice");
